@@ -1,7 +1,5 @@
-@mixin center-xy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@function _get-flex-value($key) {
+  @return map-get($flex-map, $key);
 }
 
 $flex-map: (
@@ -13,8 +11,10 @@ $flex-map: (
   center: center,
 );
 
-@function _get-flex-value($key) {
-  @return map-get($flex-map, $key);
+@mixin center-xy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // @inclue flex(between)
@@ -28,54 +28,50 @@ $flex-map: (
 }
 
 @mixin text-style($size, $color: false) {
-  @if ($size== xs) {
+  @if ($size==xs) {
     font-size: 1.2rem;
     line-height: 1.6rem;
   }
 
-  @if ($size== sm) {
+  @if ($size==sm) {
     font-size: 1.4rem;
     line-height: 2rem;
   }
 
-  @if ($size== rg) {
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-  }
-
-  @if ($size== md) {
+  @if ($size==md) {
     font-size: 2rem;
     line-height: 2.8rem;
   }
 
-  @if ($size== lg) {
+  @if ($size==lg) {
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
 
-  @if ($size== xl) {
+  @if ($size==xl) {
     font-size: 4.8rem;
     line-height: 1;
   }
 
-  @if (type-of($color) == color) {
+  @if (type-of($color)==color) {
     color: $color;
   }
 }
 
 //   @include responsive(D)
 //   @include responsive(T)
-
 /* responsive */
 @mixin responsive($screen) {
-  @if ($screen == T) {
+  @if ($screen =='T') {
+
     /* 태블릿 */
     @media screen and (min-width: $md-breakpoint) {
       @content;
     }
   }
 
-  @if ($screen == D) {
+  @if ($screen =='D') {
+
     /* 데스크탑 */
     @media screen and (min-width: $lg-breakpoint) {
       @content;
@@ -84,6 +80,7 @@ $flex-map: (
 }
 
 @mixin mobile-only() {
+
   /* 모바일 */
   @media screen and (max-width: $md-breakpoint-1px) {
     @content;
@@ -106,6 +103,7 @@ $flex-map: (
   width: 100%;
   min-height: 100%;
   transition: transform $ani-duration;
+
   &:hover {
     transform: translate(-50%, -50%) scale(1.05);
   }
