@@ -1,0 +1,76 @@
+.section_first {
+  @include center-xy;
+  flex-direction: column;
+}
+.section_first-bg_top {
+  background-image: url(/assets/section_first/bg/top.jpg);
+  width: 100%;
+  padding-bottom: 66.9%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include text-style(rg, white);
+  position: relative;
+}
+
+.section_first h2 {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+}
+.p-bg {
+  width: 120px;
+  padding: 9px 0;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 4px;
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  @include text-style(sm);
+}
+.section_first-carousel {
+  background-color: orange;
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+.carousel-page {
+  background-color: gray;
+  border-radius: 10px;
+  @include text-style(sm, white);
+  padding: 0 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.section_first-nav ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.section_first-nav ul img {
+  width: 100%;
+}
+.section_first-nav ul a {
+  @include center-xy;
+  display: flex;
+  flex-direction: column;
+  @include text-style(xs, black);
+}
+.section_first-nav li {
+  width: 20%;
+  @include responsive('T') {
+    width: 10%;
+  }
+}
+
+// . {
+//   @include responsive('T') {
+//   }
+// }
+
+// . {
+//   @include responsive('D') {
+//   }
+// }
