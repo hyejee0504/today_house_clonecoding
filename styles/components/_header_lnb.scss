@@ -1,0 +1,15 @@
+.header_lnb {
+  .header_inner {
+    overflow-x: auto;
+  }
+
+  .lnb {
+    @include flex(start);
+    display: none;
+    height: 57px;
+
+    &.is_active {
+      display: flex;
+    }
+  }
+}

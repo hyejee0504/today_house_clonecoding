@@ -1,0 +1,215 @@
+.header_main {
+  border-bottom: 1px solid $secondary;
+
+  .header_inner {
+    @include flex(between);
+    height: 50px;
+  }
+
+  .btn_open_gnb {
+    @include flex(between, center, column);
+    width: 20px;
+    height: 17px;
+
+    span,
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background-color: $primary;
+    }
+  }
+
+  .logo {
+    @include text-style(lg);
+  }
+
+  .gnb {
+    display: none;
+  }
+
+  .util_group {
+    @include flex;
+    @include text-style(md);
+    gap: $sm-gap;
+  }
+
+  .user_list {
+    display: none;
+  }
+
+  .posting {
+    display: none;
+  }
+
+  @include responsive(T) {
+    .header_inner {
+    }
+
+    .btn_open_gnb {
+      display: none;
+    }
+
+    .gnb {
+      @include flex;
+      margin-left: 36px;
+      margin-right: auto;
+      gap: 20px;
+
+      a {
+        @include text-style(md);
+        font-weight: 700;
+
+        &.is_active {
+          color: $skyblue;
+        }
+      }
+    }
+
+    .user_list {
+      @include flex;
+      margin-left: 20px;
+
+      li {
+        @include flex;
+        @include text-style(sm, $primary);
+
+        & + li::before {
+          content: '';
+          display: inline-block;
+          width: 1px;
+          height: 1em;
+          margin: 0 4px;
+          background-color: $secondary;
+        }
+      }
+    }
+
+    .posting {
+      display: block;
+      position: relative;
+
+      .btn_go_posting {
+        @include flex;
+        @include text-style(sm, $white);
+        flex: none;
+        gap: 4px;
+        height: 40px;
+        padding: 0 16px;
+        margin-left: 16px;
+        border-radius: $radius-small;
+        word-break: keep-all;
+        background-color: $skyblue;
+
+        i {
+          margin-left: 4px;
+        }
+      }
+
+      .btn_go_posting.is_active + .posting_content {
+        display: flex;
+      }
+
+      &_content {
+        @include flex(end, start);
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 1440px;
+        margin: 0 auto;
+        z-index: 10;
+        background-color: reba(0, 0, 0, 0.5);
+        pointer-events: none;
+      }
+
+      &_list {
+        padding: 8px;
+        margin-top: 48px;
+        width: 340px;
+        border: 1px solid $secondary;
+        border-radius: $radius-large;
+        box-shadow: 0 4px 10px 0 rgb(63 71 77 / 20%);
+        background-color: $white;
+        pointer-events: auto;
+      }
+
+      &_item {
+        a {
+          display: block;
+          padding: 15px 15px 15px 60px;
+
+          &:hover {
+            background-color: $tertiary;
+          }
+        }
+
+        strong {
+          @include text-style(sm);
+        }
+
+        p {
+          @include text-style(xs, $primary);
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .util_group.dt-hidden {
+      display: none;
+    }
+
+    .search {
+      position: relative;
+
+      input {
+        @include text-style(sm, $primary);
+        width: 250px;
+        line-height: 38px;
+        padding-left: 36px;
+        border: 1px solid $secondary;
+        border-radius: $radius-small;
+
+        &::-webkit-search-cancel-button {
+          -webkit-appearance: none;
+          width: 0;
+          height: 0;
+        }
+
+        &::placeholder {
+          @include text-style(sm, $secondary);
+        }
+
+        &:hover {
+          background-color: $tertiary;
+        }
+      }
+
+      label {
+        @include text-style(md, $primary);
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translate3d(0, -50%, 0);
+      }
+
+      .btn_delete_search {
+        @include text-style(xs, $white);
+        //   display: none;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translate3d(0, -50%, 0);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $secondary;
+      }
+    }
+  }
+}
