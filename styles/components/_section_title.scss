@@ -1,3 +1,8 @@
 .section_todaydeal {
-  @include text-style(rg);
+  margin-top: 30px; //삭제예정
+}
+
+.section_todaydeal h2 {
+  padding-bottom: 13px;
+  @include text-style(md);
 }
