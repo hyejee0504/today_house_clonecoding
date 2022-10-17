@@ -1,0 +1,114 @@
+.side_menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+
+  &.is_active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.is_active .side_menu_wrap {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &_wrap {
+    width: 270px;
+    height: 100%;
+    padding: 26px 16px;
+    transform: translate3d(-100%, 0, 0);
+    overflow-y: auto;
+    background-color: $white;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &_header {
+    @include flex(between);
+
+    .logo {
+      @include text-style(lg);
+    }
+
+    .btn_download_app {
+      @include text-style(sm, $skyblue);
+      font-weight: 700;
+      margin-right: 8px;
+
+      i {
+        @include text-style(xs);
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &_btns {
+    @include flex(between);
+    gap: $sm-gap;
+    margin-top: 20px;
+
+    a {
+      @include text-style(sm);
+      width: 50%;
+      line-height: 42px;
+      border: 1px solid $skyblue;
+      border-radius: $radius-small;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .btn_login {
+      color: $skyblue;
+    }
+
+    .btn_join {
+      color: $white;
+      background-color: $skyblue;
+    }
+  }
+
+  .side_menu_lnb {
+    border-top: 1px solid $secondary;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .side_menu_user {
+    border-top: 1px solid $secondary;
+    margin-top: 20px;
+    padding-top: 20px;
+
+    a {
+      @include text-style(sm);
+      line-height: 40px;
+      padding: 0 16px;
+    }
+
+    .mark {
+      @include text-style(xs);
+      display: inline-block;
+      width: 18px;
+      line-height: 18px;
+      margin-left: 4px;
+      border-radius: 50%;
+      text-align: center;
+      font-weight: 700;
+      background-color: $pink;
+      color: $white;
+    }
+  }
+
+  .side_menu_apply {
+    @include flex(start);
+    @include text-style(sm);
+    gap: $lg-gap;
+    border-top: 1px solid $secondary;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+}

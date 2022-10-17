@@ -1,15 +1,74 @@
 .header_lnb {
+  $height: 40px;
+  $border-width: 2px;
+
   .header_inner {
+    width: 100%;
     overflow-x: auto;
   }
 
   .lnb {
     @include flex(start);
     display: none;
-    height: 57px;
+    gap: 10px;
+    height: $height;
+    padding: 0 24px;
 
     &.is_active {
       display: flex;
+    }
+
+    a {
+      @include flex;
+      @include text-style(sm);
+      flex: 0 0 auto;
+      gap: 4px;
+      padding: 0 4px;
+      line-height: $height - $border-width * 2;
+
+      &:hover,
+      &focus {
+        color: $skyblue;
+      }
+
+      &.is_active {
+        color: $skyblue;
+        font-weight: 700;
+        border-top: $border-width solid transparent;
+        border-bottom: $border-width solid $skyblue;
+      }
+
+      .tag {
+        @include text-style(xs, $white);
+        padding: 0 4px;
+        border-radius: $radius-small;
+        background-color: $secondary;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    $height: 50px;
+
+    border-bottom: 1px solid $secondary;
+
+    .lnb {
+      height: $height;
+
+      a {
+        // @include text-style(md);
+        line-height: $height - $border-width * 2;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .header_inner {
+      width: calc(100% - 48px);
+    }
+
+    .lnb {
+      padding: 0;
     }
   }
 }
