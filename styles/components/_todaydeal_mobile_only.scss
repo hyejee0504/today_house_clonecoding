@@ -1,7 +1,7 @@
 .mobile_screenout {
   display: none;
   @include responsive('T') {
-    display: block;
+    display: flex;
   }
 }
 

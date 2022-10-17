@@ -1,0 +1,9 @@
+.section_todaypic {
+  @include center-xy;
+}
+.section_todaypic ul {
+  //   position: relative;
+  @include flex(left, between);
+  overflow: hidden;
+  gap: $md-gap;
+}

@@ -98,19 +98,6 @@ $flex-map: (
   }
 }
 
-// @mixin ani-hover {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 100%;
-//   min-height: 100%;
-//   transition: transform $ani-duration;
-//   &:hover {
-//     transform: translate(-50%, -50%) scale(1.05);
-//   }
-// }
-
 @mixin ani-hover {
   img {
     position: absolute;

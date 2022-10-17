@@ -1,14 +1,12 @@
 .section_todaydeal li img {
   display: absoulte;
-  width: 50%;
+  width: 100%;
   height: 100%;
   border-radius: $radius-small;
   @include responsive('T') {
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-wrap: nowrap; //줄바꿈
+    &::after {
+      content: '1일 남음';
+    }
   }
 }
 
@@ -44,17 +42,21 @@
 }
 
 .percent_txt {
-  display: inline-block;
   @include text-style(xl, $pink);
   padding-top: 10px;
   @include responsive('T') {
-    @include text-style(rg, $pink);
+    @include text-style(rg, $skyblue);
+    padding-top: 0;
   }
 }
 
 .price_txtsection span {
   @include text-style(rg, $pink);
   font-weight: 700;
+  @include responsive('T') {
+    @include text-style(rg, $skyblue);
+    padding-top: 0;
+  }
 }
 
 .moreshow_txt {
@@ -72,4 +74,35 @@
 .price_txt {
   @include text-style(rg, $black);
   font-weight: 700;
+}
+
+.price_txtsection,
+.review_txtsection {
+  @include responsive('T') {
+    display: flex;
+    margin: 3px 0;
+  }
+}
+
+.star_txt {
+  @include text-style(xs, $black);
+  font-weight: 700;
+  i {
+    @include text-style(xs, $skyblue);
+  }
+}
+
+.review_txt {
+  @include text-style(xs, $primary);
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.freetrans {
+  background-color: rgb(234, 233, 233);
+  @include text-style(xs, $primary);
+  padding: 2px 5px;
+  font-weight: 600;
+  border-radius: $radius-small;
+  width: fit-content; //컨텐츠 크기만큼 맞춤 inline-block안해도됨!
 }
