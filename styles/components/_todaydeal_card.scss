@@ -1,13 +1,8 @@
-.section_todaydeal li img {
+.section_todaydeal li .todaydeal_pic {
   display: absoulte;
   width: 100%;
   height: 100%;
   border-radius: $radius-small;
-  @include responsive('T') {
-    &::after {
-      content: '1일 남음';
-    }
-  }
 }
 
 .mobile_txt {
@@ -25,6 +20,13 @@
   padding: 2px 5px;
   font-weight: 600;
   border-radius: $radius-small;
+  @include responsive('T') {
+    display: inline-block;
+    width: fit-content;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 }
 
 .productname_txt {

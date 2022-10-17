@@ -20,6 +20,7 @@
 .img_wrap {
   overflow: hidden;
   border-radius: $radius-small;
+  position: relative;
 }
 
 //모바일 경우 display

@@ -1,9 +1,18 @@
 .section_todaypic {
   @include center-xy;
+  position: relative;
 }
+
 .section_todaypic ul {
-  //   position: relative;
-  @include flex(left, between);
-  overflow: hidden;
+  display: grid;
   gap: $md-gap;
+  grid-template-columns: 1fr 1fr;
+  @include responsive('T') {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  li {
+    overflow: hidden;
+    border-radius: $radius-small;
+    position: relative;
+  }
 }

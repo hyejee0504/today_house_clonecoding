@@ -1,4 +1,31 @@
-.section_todaypic li img {
+.section_todaypic li .today_pic {
   border-radius: $radius-small;
-  width: 35vw;
+  width: 45vw;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &::after {
+    background-image: url(/assets/icon/todaypic_1.png);
+    z-index: 2;
+    position: absolute;
+  }
+  @include responsive('T') {
+    width: 100%;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  width: 40px;
+  opacity: 0.7;
+}
+
+.bookmark_pic {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  opacity: 1;
 }
