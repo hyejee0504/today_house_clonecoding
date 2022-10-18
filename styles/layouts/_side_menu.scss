@@ -13,10 +13,10 @@
   &.is_active {
     opacity: 1;
     visibility: visible;
-  }
 
-  &.is_active .side_menu_wrap {
-    transform: translate3d(0, 0, 0);
+    &_wrap {
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   &_wrap {

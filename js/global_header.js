@@ -11,7 +11,6 @@
   }
 
   // 헤더 sticky
-  document.body.style.height = '400vh';
   const lnb = globalHeader.querySelector('.header_lnb');
 
   if (window.pageYOffset === 0) {
