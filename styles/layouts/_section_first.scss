@@ -1,7 +1,7 @@
 .section_first {
   @include center-xy;
   flex-direction: column;
-  margin: 0 3%;
+  margin: 3% 3%;
 }
 .wrapper-top {
   width: 100%;
@@ -11,57 +11,65 @@
   @include responsive('T') {
     flex-direction: row;
   }
-  .section_first-bg_top {
-    background-image: url(/assets/section_first/bg/top.jpg);
+  .wrapper-bg {
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    @include text-style(sm, white);
-
     position: relative;
-    @include responsive('T') {
-      flex-direction: row;
-      @include text-style(rg, white);
-    }
-    h2 {
+    overflow: hidden;
+
+    .section_first-bg_top {
+      background-image: url(/assets/section_first/bg/top.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      @include text-style(sm, white);
+      @include ani-hover;
       position: absolute;
-      top: 45%;
-      left: 5%;
-    }
-    .p-bg {
-      width: 120px;
-      padding: 9px 0;
-      text-align: center;
-      border: 1px solid white;
-      border-radius: 4px;
-      position: absolute;
-      top: 55%;
-      left: 5%;
-      @include text-style(xs);
+      @include responsive('T') {
+        flex-direction: row;
+        @include text-style(rg, white);
+      }
+      h2 {
+        position: absolute;
+        top: 45%;
+        left: 5%;
+      }
+      .p-bg {
+        width: 120px;
+        padding: 9px 0;
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 4px;
+        position: absolute;
+        top: 55%;
+        left: 5%;
+        @include text-style(xs);
+      }
     }
   }
 }
 .section_first-carousel {
-  background-color: orange;
-  height: 200px;
+  height: 100%;
   width: 100%;
   position: relative;
+  overflow: hidden;
   .cont-carousel {
+    display: flex;
+    flex-direction: row;
+
     width: 100%;
     height: 100%;
-    .carousel1 {
-      background: url(/assets/section_first/carousel_img/164992755565792180.jpg) no-repeat;
-    }
-    .carousel2 {
-      background-image: url(/assets/section_first/carousel_img/166393326465912966.jpg) no-repeat;
-    }
-    .carousel3 {
-      background-image: url(/assets/section_first/carousel_img/166393328434624741.jpg) no-repeat;
-    }
-    .carousel4 {
-      background-image: url(/assets/section_first/carousel_img/166452879912705926.jpg) no-repeat;
+    animation: carousel 5s 1s infinite; //캐러셀 에니메이션
+    li {
+      @include ani-hover;
+      position: relative;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -105,7 +113,23 @@
     @include text-style(xs, black);
   }
 }
-
+@keyframes carousel {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
 // . {
 //   @include responsive('T') {
 //   }
