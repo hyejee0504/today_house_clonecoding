@@ -17,6 +17,7 @@
     <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-- 혜수작성_ 헤더 -->
     <header class="global_header">
       <div class="header_main">
         <div class="header_inner">
@@ -52,40 +53,40 @@
           </ul>
 
           <div class="posting">
-            <button class="btn_go_posting" type="button">글쓰기<i class="fa-solid fa-chevron-down dt_only" aria-hidden="true"></i></button>
+            <button class="btn_open_posting" type="button">글쓰기<i class="fa-solid fa-chevron-down dt_only" aria-hidden="true"></i></button>
             <div class="posting_content">
               <ul class="posting_list">
-                <li class="posting_item">
+                <li class="posting_item is_pic">
                   <a href="#">
                     <strong>사진/동영상 올리기</strong>
                     <p>우리 집의 공간과 나의 일상을 기록해 보세요.</p>
                   </a>
                 </li>
-                <li class="posting_item">
+                <li class="posting_item is_houses">
                   <a href="#">
                     <strong>집들이 글쓰기</strong>
                     <p>집에 관한 이야기를 글로 작성해 보세요.</p>
                   </a>
                 </li>
-                <li class="posting_item">
+                <li class="posting_item is_know">
                   <a href="#">
                     <strong>노하우 글쓰기</strong>
                     <p>다양한 인테리어 노하우를 공유해 주세요.</p>
                   </a>
                 </li>
-                <li class="posting_item">
+                <li class="posting_item is_review">
                   <a href="#">
                     <strong>상품 리뷰 쓰기</strong>
                     <p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p>
                   </a>
                 </li>
-                <li class="posting_item">
+                <li class="posting_item is_expert">
                   <a href="#">
                     <strong>시공 전문가 리뷰쓰기</strong>
                     <p>시공 전문가 리뷰를 작성하고 포인트도 받아 보세요.</p>
                   </a>
                 </li>
-                <li class="posting_item">
+                <li class="posting_item is_interior">
                   <a href="#">
                     <strong>인테리어 질문하기</strong>
                     <p>인테리어 고수들과 전문가들에게 질문해 보세요.</p>
@@ -132,6 +133,7 @@
         </div>
       </div>
     </header>
+    <!-- //혜수작성_ 헤더 -->
 
     <!-- 혜지작성_ 오늘의 딜, 오늘의 사진 -->
     <section class="section_todaydeal">
@@ -248,6 +250,7 @@
       </div>
     </section>
 
+    <!-- 푸터 -->
     <footer class="global_footer">
       <div class="footer_inner">
         <div class="service">
@@ -352,10 +355,21 @@
         </div>
       </div>
     </footer>
+    <!-- //푸터 -->
 
-    <aside class="side_search"></aside>
+    <!-- 모달 -->
+    <aside class="side_search">
+      <div class="side_search_wrap">
+        <div class="search">
+          <label for="searchInput"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></label>
+          <input type="search" id="searchInput" placeholder="통합검색" />
+          <button class="btn_delete_search" type="button" aria-label="입력 내용 삭제"><i class="fa-solid fa-x" aria-hidden="true"></i></button>
+        </div>
+        <button class="btn_close_search mb_only" type="button">취소</button>
+      </div>
+    </aside>
 
-    <aside class="side_menu mb_only is_active">
+    <aside class="side_menu mb_only">
       <div class="side_menu_wrap">
         <div class="side_menu_header">
           <h2 class="logo"><a href="#">오늘의집</a></h2>
@@ -446,10 +460,15 @@
           <a href="#">전문가 신청</a>
           <a href="#">판매자 신청</a>
         </div>
+
+        <div class="side_menu_search"></div>
       </div>
     </aside>
 
     <script src="js/side_menu.js"></script>
     <script src="js/side_lnb.js"></script>
+    <script src="js/side_search.js"></script>
+    <script src="js/global_header.js"></script>
+    <!-- //모달 -->
   </body>
 </html>
