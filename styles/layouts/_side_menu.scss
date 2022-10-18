@@ -8,6 +8,7 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.2s ease-in-out;
+  z-index: 200;
 
   &.is_active {
     opacity: 1;
@@ -82,6 +83,10 @@
     border-top: 1px solid $secondary;
     margin-top: 20px;
     padding-top: 20px;
+
+    li {
+      margin-top: 4px;
+    }
 
     a {
       @include text-style(sm);

@@ -2,6 +2,8 @@
   $height: 40px;
   $border-width: 2px;
 
+  background-color: $white;
+
   .header_inner {
     width: 100%;
     overflow-x: auto;
@@ -56,7 +58,6 @@
       height: $height;
 
       a {
-        // @include text-style(md);
         line-height: $height - $border-width * 2;
       }
     }

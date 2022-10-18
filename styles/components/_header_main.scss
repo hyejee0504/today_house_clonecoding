@@ -1,5 +1,11 @@
 .header_main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid $secondary;
+  background-color: $white;
+  z-index: 10;
 
   .header_inner {
     @include flex(between);
@@ -77,10 +83,22 @@
     }
 
     .posting {
-      display: block;
-      position: relative;
+      $positing_class: 'pic', 'houses', 'know', 'review', 'expert', 'interior';
 
-      .btn_go_posting {
+      display: block;
+
+      &.is_active {
+        .posting_content {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .posting_list {
+          transform: translate3d(0, 12px, 0);
+        }
+      }
+
+      .btn_open_posting {
         @include flex;
         @include text-style(sm, $white);
         flex: none;
@@ -97,44 +115,52 @@
         }
       }
 
-      .btn_go_posting.is_active + .posting_content {
-        display: flex;
-      }
-
       &_content {
         @include flex(end, start);
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        max-width: 1440px;
+        max-width: 1550px;
         margin: 0 auto;
         z-index: 10;
-        background-color: reba(0, 0, 0, 0.5);
         pointer-events: none;
+        opacity: 0;
+        visibility: visible;
+        transition: 0.2s ease-in-out;
       }
 
       &_list {
+        transform: translate3d(0, 0, 0);
         padding: 8px;
-        margin-top: 48px;
         width: 340px;
+        margin-top: 60px;
         border: 1px solid $secondary;
         border-radius: $radius-large;
         box-shadow: 0 4px 10px 0 rgb(63 71 77 / 20%);
         background-color: $white;
         pointer-events: auto;
+        transition: transform 0.2s ease-in-out;
       }
 
       &_item {
+        background: url('../../assets/images/header_posting_icon.png') no-repeat 0 0;
+
+        @each $class in $positing_class {
+          $i: index($positing_class, $class) - 1;
+          &.is_#{$class} {
+            background-position: 0 -70 * $i + px;
+          }
+        }
+
+        &:hover {
+          background-color: $tertiary;
+        }
+
         a {
           display: block;
           padding: 15px 15px 15px 60px;
-
-          &:hover {
-            background-color: $tertiary;
-          }
         }
 
         strong {

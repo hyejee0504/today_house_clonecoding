@@ -1,0 +1,27 @@
+.global_header {
+  position: relative;
+  height: 120px;
+  z-index: 100;
+
+  .header_lnb {
+    position: fixed;
+    width: 100%;
+    top: 50px;
+  }
+
+  @include responsive(T) {
+    height: 132px;
+
+    &.is_up {
+      .header_lnb {
+        width: 100%;
+        top: 81px;
+      }
+    }
+
+    .header_lnb {
+      top: 30px;
+      transition: top 0.1s ease 0s;
+    }
+  }
+}
