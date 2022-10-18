@@ -17,7 +17,7 @@
     <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- 혜수작성_ 헤더 -->
+    <!-- 헤더 -->
     <header class="global_header">
       <div class="header_main">
         <div class="header_inner">
@@ -133,120 +133,206 @@
         </div>
       </div>
     </header>
-    <!-- //혜수작성_ 헤더 -->
+    <!-- //헤더 -->
 
-    <!-- 혜지작성_ 오늘의 딜, 오늘의 사진 -->
+    <!-- 오늘의 딜 -->
     <section class="section_todaydeal">
       <div class="todaydeal_inner">
         <h2 class="section_title">오늘의 딜</h2>
-        <ul>
-          <li class="">
+        <ul id="slider">
+          <li class="item">
             <a href="">
-              <img src="./assets/todaydeal_img/main_todaydeal_section_01.jpg" alt="" />
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_01.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
               <div class="mobile_txt">
-                <p class="mobile_only">6일 남음</p>
-                <p class="mobile_screenout">스위트 하트</p>
-                <h3>신규디자인출시! 1년무상AS 무소음 인테리어벽시계 21종</h3>
-                <p>최저가 도전</p>
-                <div>
-                  <strong>27%</strong>
-                  <p class="mobile_screenout">17,400 외</p>
+                <p class="mb-only remainday_txt">6일 남음</p>
+                <p class="mobile_screenout brand_name">밝히는 가온</p>
+                <h3 class="productname_txt">[오늘의 딜]무선/유선 LED 멀티탁 센서등 무드들 조명 (건전지/충전식)</h3>
+                <p class="bestcheap_txt">최저가 도전</p>
+                <div class="price_txtsection">
+                  <strong class="percent_txt">27</strong><span>%</span>
+                  <p class="mobile_screenout price_txt">17,400 외</p>
                 </div>
-                <div class="mobile_screenout">
-                  <p>4.6</p>
-                  <p>리뷰 5,990</p>
+                <div class="review_txtsection mobile_screenout">
+                  <p class="star_txt"><i class="fa-solid fa-star"></i> 4.6</p>
+                  <p class="review_txt">리뷰 14,766</p>
                 </div>
                 <p class="freetrans mobile_screenout">무료배송</p>
-                <p class="mobile_only">특가 731개 더보기</p>
+                <p class="mb-only moreshow_txt">특가 731개 더보기 ></p>
               </div>
             </a>
           </li>
-          <li class="">
+          <li class="item">
             <a href="">
-              <img src="./assets/todaydeal_img/main_todaydeal_section_02.jpg" alt="" />
-              <p>밝히는 가온</p>
-              <h3>[오늘의 딜]무선/유선 LED 멀티탁 센서등 무드들 조명 (건전지/충전식)</h3>
-              <p>최저가 도전</p>
-              <p><strong>50%</strong>7,900 외</p>
-              <div>
-                <p>4.6</p>
-                <p>리뷰 14,766</p>
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_02.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">1일 남음</p>
+              <p class="brand_name">가쯔</p>
+              <h3 class="productname_txt">[주말특가/오늘의딜][1+1]초강력 실리콘 양면테이프</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">64%</strong> 3,900</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.5</p>
+                <p class="review_txt">리뷰 479</p>
               </div>
               <p class="freetrans">무료배송</p>
             </a>
           </li>
-          <li class="">
+          <li class="item">
             <a href="">
-              <img src="./assets/todaydeal_img/main_todaydeal_section_03.jpg" alt="" />
-              <p>밝히는 가온</p>
-              <h3>[오늘의 딜]무선/유선 LED 멀티탁 센서등 무드들 조명 (건전지/충전식)</h3>
-              <p>최저가 도전</p>
-              <p><strong>50%</strong>7,900 외</p>
-              <div>
-                <p>4.6</p>
-                <p>리뷰 14,766</p>
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_03.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">2일 남음</p>
+              <p class="brand_name">네모라인</p>
+              <h3 class="productname_txt">(1+1) 엠보극세사 베개솜/경추베개솜/베개커버외특가모음</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">37%</strong> 9,900 외</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.4</p>
+                <p class="review_txt">리뷰 37,946</p>
               </div>
               <p class="freetrans">무료배송</p>
             </a>
           </li>
-          <!-- <li class="">
+          <li class="item">
             <a href="">
-              <img src="./assets/todaydeal_img/main_todaydeal_section_04.jpg" alt="" />
-              <p>밝히는 가온</p>
-              <h3>[오늘의 딜]무선/유선 LED 멀티탁 센서등 무드들 조명 (건전지/충전식)</h3>
-              <p>최저가 도전</p>
-              <p><strong>50%</strong>7,900 외</p>
-              <div>
-                <p>4.6</p>
-                <p>리뷰 14,766</p>
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_04.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">5일 남음</p>
+              <p class="brand_name">빌레로이앤보흐</p>
+              <h3 class="productname_txt">[오늘의 딜][해외]크리스마스 한정판! 토이딜라이트 외 빌보 BEST 골라담기</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">45%</strong> 21,900 외</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.7</p>
+                <p class="review_txt">리뷰 2,859</p>
+              </div>
+              <p class="freetrans">해외직구</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_05.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">10일 남음</p>
+              <p class="brand_name">쿤탈</p>
+              <h3 class="productname_txt">쿤달 디퓨저 200ml 2구, 3구 & 차량용</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">20%</strong> 14,800 외</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.7</p>
+                <p class="review_txt">리뷰 1,099</p>
               </div>
               <p class="freetrans">무료배송</p>
             </a>
           </li>
-          <li class="">
+          <li class="item">
             <a href="">
-              <img src="./assets/todaydeal_img/main_todaydeal_section_05.jpg" alt="" />
-              <p>밝히는 가온</p>
-              <h3>[오늘의 딜]무선/유선 LED 멀티탁 센서등 무드들 조명 (건전지/충전식)</h3>
-              <p>최저가 도전</p>
-              <p><strong>50%</strong>7,900 외</p>
-              <div>
-                <p>4.6</p>
-                <p>리뷰 14,766</p>
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_06.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">6일 남음</p>
+              <p class="brand_name">드리미</p>
+              <h3 class="productname_txt">[오늘의 딜][사전예약] 10.16 국내런칭! 드리미 W10 Pro 로봇 청소기 (~30일까지)</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">15%</strong> 1,099,000</p>
+              <div class="review_txtsection">
+                <p class="review_txt">스크랩 115</p>
               </div>
               <p class="freetrans">무료배송</p>
             </a>
           </li>
-          <li class="">
+          <li class="item">
             <a href="">
-              <img src="./assets/todaydeal_img/main_todaydeal_section_06.jpg" alt="" />
-              <p>밝히는 가온</p>
-              <h3>[오늘의 딜]무선/유선 LED 멀티탁 센서등 무드들 조명 (건전지/충전식)</h3>
-              <p>최저가 도전</p>
-              <p><strong>50%</strong>7,900 외</p>
-              <div>
-                <p>4.6</p>
-                <p>리뷰 14,766</p>
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_07.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">8일 남음</p>
+              <p class="brand_name">다우니</p>
+              <h3 class="productname_txt">초고농축 섬유유연제 1Lx5개</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">13%</strong> 25,900 외</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.8</p>
+                <p class="review_txt">리뷰 3,833</p>
               </div>
               <p class="freetrans">무료배송</p>
             </a>
           </li>
-          <li class="">
-            <a href="">
-              <img src="./assets/todaydeal_img/main_todaydeal_section_07.jpg" alt="" />
-              <p>밝히는 가온</p>
-              <h3>[오늘의 딜]무선/유선 LED 멀티탁 센서등 무드들 조명 (건전지/충전식)</h3>
-              <p>최저가 도전</p>
-              <p><strong>50%</strong>7,900 외</p>
-              <div>
-                <p>4.6</p>
-                <p>리뷰 14,766</p>
-              </div>
-              <p class="freetrans">무료배송</p>
-            </a>
-          </li> -->
         </ul>
         <a href="" class="plus_anc mobile_screenout">더보기</a>
+        <button class="prev mobile_screenout" onclick="slider.prev()"><i class="fa-sharp fa-solid fa-chevron-left"></i></button>
+        <button class="next mobile_screenout" onclick="slider.next()"><i class="fa-sharp fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+    <!-- 오늘의 인기사진 -->
+    <section class="section_todaypic">
+      <div class="todaypic_inner">
+        <h2 class="section_title">오늘의 인기 사진</h2>
+        <ul>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_01.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_1.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_02.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_2.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_03.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_3.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_04.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_4.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_05.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_5.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_06.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_6.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_07.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_7.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_08.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_8.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+        </ul>
+        <a href="" class="plus_anc">더보기</a>
       </div>
     </section>
 
@@ -464,11 +550,12 @@
         <div class="side_menu_search"></div>
       </div>
     </aside>
-
-    <script src="js/side_menu.js"></script>
-    <script src="js/side_lnb.js"></script>
-    <script src="js/side_search.js"></script>
-    <script src="js/global_header.js"></script>
     <!-- //모달 -->
+
+    <script src="./js/side_menu.js"></script>
+    <script src="./js/side_lnb.js"></script>
+    <script src="./js/side_search.js"></script>
+    <script src="./js/global_header.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
-.section_todaydeal {
-  @include text-style(rg);
+.section_title {
+  padding-bottom: 13px;
+  @include text-style(md);
 }

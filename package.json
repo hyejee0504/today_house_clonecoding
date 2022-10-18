@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sduu/clone-ohou#readme",
   "dependencies": {
+    "popmotion": "^11.0.5",
     "sass": "^1.55.0"
   }
 }
