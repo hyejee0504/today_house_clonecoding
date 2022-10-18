@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
-    <script src="js/main.js" defer></script>
+    <!-- <script src="js/main.js" defer></script> -->
+    <script src="./js/hyebin.js" defer></script>
   </head>
   <body>
     <!-- 혜지작성_ 오늘의 딜, 오늘의 사진 -->
@@ -138,8 +139,12 @@
       <div class="premium_inner">
         <div class="premium_title_container">
           <h2 class="premium_title">프리미엄도 오늘의집!</h2>
-          <span class="fa-solid fa-chevron-right"></span>
-          <p class="more" href="">더보기</p>
+          <div class=".btn_container right">
+            <button type="button" class="slide right_btn premium">
+              <span class="fa-solid fa-chevron-right"></span>
+            </button>
+          </div>
+          <button class="more" href="">더보기</button>
         </div>
         <div class="scroll_wrap">
           <ul class="premium_imgList">
@@ -209,92 +214,145 @@
       <div class="best_inner">
         <div class="best_title_container">
           <h2 class="best_title">베스트</h2>
-          <span class="fa-solid fa-chevron-right"></span>
+          <div class=".btn_container right">
+            <button id="right_btn" class="slide right_btn">
+              <span class="fa-solid fa-chevron-right"></span>
+            </button>
+          </div>
+          <div class=".btn_container left">
+            <button class="left_btn slide">
+              <span class="fa-solid fa-chevron-left scout"></span>
+            </button>
+          </div>
           <p class="more" href="">더보기</p>
         </div>
 
-        <div class="best_category_btn">
-          <ul class="best_category_list">
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">전체</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">가구</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">페브릭</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">가전</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">주방용품</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">식품</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">데코·식물</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">조명</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">수납정리</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">생활용품</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">생필품</span>
-              </label>
-            </li>
-            <li>
-              <label for="" class="best_category_label">
-                <input type="checkbox" class="category_btn" />
-                <span class="best_category_text">유아아동</span>
-              </label>
-            </li>
-          </ul>
+        <div class="category">
+          <div class="best_category_btn">
+            <ul class="best_category_list">
+              <li>
+                <label for="" class="best_category_label focus_category">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">전체</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">가구</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">페브릭</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">가전</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">주방용품</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">식품</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">데코·식물</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">조명</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">수납정리</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text first">생활용품</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">생필품</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">유아아동</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">반려동물</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">실내운동</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">캠핑용품</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">공구·DIY</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">인테리어시공</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">렌탈</span>
+                </label>
+              </li>
+              <li>
+                <label for="" class="best_category_label">
+                  <input type="checkbox" class="category_btn" />
+                  <span class="best_category_text">유아아동</span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="scroll_wrap">
           <ul class="best_imgList">
             <li>
               <div class="best_scrap_container">
-                <img class="img1" src="./assets/images/images/베스트/롤팩매트리스.jpg" alt="spoon" />
+                <div class="img_container"><img class="best_img" src="./assets/images/images/베스트/롤팩매트리스.jpg" alt="spoon" /></div>
                 <button class="best_scrap_badge_btn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inactive-icon">
                     <defs>
@@ -374,7 +432,7 @@
             </li>
             <li>
               <div class="best_scrap_container">
-                <img src="./assets/images/images/베스트/쉬폰커튼.jpg" alt="spoon" />
+                <div class="img_container"><img class="best_img" src="./assets/images/images/베스트/쉬폰커튼.jpg" alt="spoon" /></div>
                 <button class="best_scrap_badge_btn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inactive-icon">
                     <defs>
@@ -434,7 +492,7 @@
             </li>
             <li>
               <div class="best_scrap_container">
-                <img src="./assets/images/images/베스트/침대매트리스.jpg" alt="spoon" />
+                <div class="img_container"><img class="best_img" src="./assets/images/images/베스트/침대매트리스.jpg" alt="spoon" /></div>
                 <button class="best_scrap_badge_btn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inactive-icon">
                     <defs>
