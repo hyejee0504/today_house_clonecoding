@@ -1,0 +1,99 @@
+.global_footer {
+  padding: 30px 0;
+  background-color: $tertiary;
+
+  .service {
+    @include flex(start, start, column);
+    @include text-style(sm);
+    margin-bottom: 6px;
+
+    .btn_go_service {
+      @include text-style(sm);
+      margin-bottom: 6px;
+      font-weight: 700;
+
+      i {
+        @include text-style(xs);
+      }
+    }
+
+    .btn_call {
+      @include text-style(lg);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+  }
+
+  .sns_list {
+    @include flex(start);
+    @include text-style(lg, $secondary);
+    gap: $lg-gap;
+    margin-bottom: 10px;
+
+    .app {
+      color: $primary;
+    }
+  }
+
+  .fnb {
+    @include flex(start);
+    flex-wrap: wrap;
+    gap: 4px $sm-gap;
+    margin-bottom: 10px;
+
+    a {
+      flex: 0 0 auto;
+    }
+  }
+
+  .info {
+    margin-bottom: 10px;
+    opacity: 0.7;
+
+    dt,
+    dd {
+      display: inline-block;
+    }
+  }
+
+  .noti {
+    margin-bottom: 10px;
+    opacity: 0.7;
+  }
+
+  .copyright {
+    margin-bottom: 26px;
+  }
+
+  .mark {
+    @include flex(start);
+    gap: $lg-gap;
+
+    &_item {
+      @include flex;
+      gap: $sm-gap;
+
+      img {
+        width: 32px;
+      }
+
+      figcaption {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .sns_list {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .info {
+      @include flex(start);
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+  }
+}

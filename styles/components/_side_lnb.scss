@@ -1,0 +1,53 @@
+.side_menu_lnb {
+  .lnb_wrap + .lnb_wrap {
+    margin-top: 4px;
+  }
+
+  .lnb_wrap.is_active {
+    .btn_open_lnb .open_icon {
+      transform: rotate(180deg);
+    }
+
+    .lnb {
+      height: auto;
+    }
+  }
+
+  .btn_open_lnb {
+    @include flex(start);
+    @include text-style(md);
+    width: 100%;
+    padding: 0 16px;
+    line-height: 40px;
+    gap: 8px;
+
+    .open_icon {
+      @include text-style(xs);
+      margin-left: auto;
+      transform-origin: center;
+    }
+  }
+
+  .lnb {
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+
+    li {
+      margin-top: 2px;
+    }
+
+    a {
+      @include text-style(sm);
+      display: block;
+      line-height: 40px;
+      padding: 0 40px;
+      border-radius: $radius-small;
+
+      &.is_active {
+        font-weight: 700;
+        background-color: $tertiary;
+      }
+    }
+  }
+}
