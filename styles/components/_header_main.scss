@@ -26,10 +26,6 @@
     @include text-style(lg);
   }
 
-  .gnb {
-    display: none;
-  }
-
   .util_group {
     @include flex;
     @include text-style(md);
@@ -59,27 +55,6 @@
 
     .btn_open_gnb {
       display: none;
-    }
-
-    .gnb {
-      @include flex;
-      margin-left: 36px;
-      margin-right: auto;
-      gap: 20px;
-
-      a {
-        @include text-style(md);
-        font-weight: 700;
-
-        &:hover,
-        &focus {
-          color: $skyblue;
-        }
-
-        &.is_active {
-          color: $skyblue;
-        }
-      }
     }
 
     .user_list {
