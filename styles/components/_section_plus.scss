@@ -1,0 +1,7 @@
+.plus_anc {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include text-style(rg, $skyblue);
+  font-weight: 700;
+}
