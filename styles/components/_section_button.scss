@@ -1,0 +1,22 @@
+button {
+  @include text-style(lg, #202427);
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: $white;
+  box-shadow: 0 2px 5px rgb(63 71 77 / 15%);
+  position: absolute;
+  &:hover {
+    background-color: #f7f9fa;
+  }
+}
+
+.prev {
+  top: 50%;
+  left: -24px;
+  display: none;
+}
+.next {
+  top: 50%;
+  right: -24px;
+}
