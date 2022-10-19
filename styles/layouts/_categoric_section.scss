@@ -30,10 +30,10 @@
         font-weight: 500;
     }
 
-.fa-chevron-left{
+.arrow_left{
   position:absolute;
   top: 50%;
-  left: -10px;
+  left: 0px;
   transform: translate(0%, -50%);
   width: 36px;
   height: 36px;
@@ -46,7 +46,7 @@
   font-size: 20px;
   line-height: 1.7;
 }
-.fa-chevron-right{
+.arrow_right{
   position:absolute;
   top: 50%;
   right: 0;
