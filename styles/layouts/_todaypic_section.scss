@@ -1,0 +1,19 @@
+.section_todaypic {
+  @include center-xy;
+  position: relative;
+  margin: 30xp 0;
+}
+
+.section_todaypic ul {
+  display: grid;
+  gap: $md-gap;
+  grid-template-columns: 1fr 1fr;
+  @include responsive('T') {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  li {
+    overflow: hidden;
+    border-radius: $radius-small;
+    position: relative;
+  }
+}

@@ -21,7 +21,7 @@
 
 .mb-only {
   @media screen and (min-width: $md-breakpoint) {
-    display: none !important;
+    display: none; //important제외해야되서 했어욤..
   }
 }
 

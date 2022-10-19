@@ -1,13 +1,16 @@
-.mobile_only {
+.mobile_screenout {
+  display: none;
   @include responsive('T') {
-    display: none;
+    display: flex;
   }
 }
 
 .mobile_screenout {
   display: none;
 
+.section_todaydeal {
+  overflow-x: scroll;
   @include responsive('T') {
-    display: block;
+    overflow-x: hidden;
   }
 }

@@ -1,6 +1,110 @@
-.section_todaydeal li img {
-  width: 50%;
+.section_todaydeal li .todaydeal_pic {
+  display: absoulte;
+  width: 100%;
   height: 100%;
-  // padding-right: $sm-gap;
-  border-radius: $radius-large;
+  border-radius: $radius-small;
+}
+
+.mobile_txt {
+  padding-left: $md-gap;
+  @include responsive('T') {
+    padding-left: 0;
+  }
+}
+
+//카드 안의 txt모음
+.remainday_txt {
+  display: inline-block; //컨텐츠 크기만틈 맞춤
+  background-color: $pink;
+  @include text-style(xs, $white);
+  padding: 2px 5px;
+  font-weight: 600;
+  border-radius: $radius-small;
+  @include responsive('T') {
+    display: inline-block;
+    width: fit-content;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.productname_txt {
+  @include text-style(rg, $primary);
+  font-weight: 600;
+  padding: 5px 0;
+  @include responsive('T') {
+    @include text-style(sm, $primary);
+  }
+}
+
+.bestcheap_txt {
+  @include text-style(xs, $pink);
+  font-weight: 700;
+}
+
+.percent_txt {
+  @include text-style(xl, $pink);
+  padding-top: 10px;
+  @include responsive('T') {
+    @include text-style(rg, $skyblue);
+    padding-top: 0;
+  }
+}
+
+.price_txtsection span {
+  @include text-style(rg, $pink);
+  font-weight: 700;
+  @include responsive('T') {
+    @include text-style(rg, $skyblue);
+    padding-top: 0;
+  }
+}
+
+.moreshow_txt {
+  @include text-style(sm, $pink);
+  font-weight: 700;
+  position: absolute;
+  bottom: 15px;
+}
+
+//태블릿 txt
+.brand_name {
+  @include text-style(xs, $primary);
+}
+
+.price_txt {
+  @include text-style(rg, $black);
+  font-weight: 700;
+}
+
+.price_txtsection,
+.review_txtsection {
+  @include responsive('T') {
+    display: flex;
+    margin: 3px 0;
+  }
+}
+
+.star_txt {
+  @include text-style(xs, $black);
+  font-weight: 700;
+  i {
+    @include text-style(xs, $skyblue);
+  }
+}
+
+.review_txt {
+  @include text-style(xs, $primary);
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.freetrans {
+  background-color: rgb(234, 233, 233);
+  @include text-style(xs, $primary);
+  padding: 2px 5px;
+  font-weight: 600;
+  border-radius: $radius-small;
+  width: fit-content; //컨텐츠 크기만큼 맞춤 inline-block안해도됨!
 }
