@@ -1,5 +1,6 @@
 .section_todaystory {
     @include center-xy;
+    margin-top: 20px;
 }
 
 /* 모바일 */
@@ -14,10 +15,6 @@
     margin-top: 10px;
     width: 49%;
 }
-// .list_todaystory.story {
-//     display: flex;
-// }
-
 
 .lists_todaystory li {
     &:hover img{
@@ -99,7 +96,6 @@
 
 
   .userimg_todaystory {
-    // display: inline-block;
     border-radius: 50%;
     height: 25px;
     padding-right: 5px;
@@ -110,9 +106,3 @@
     
     font-size: 12px;
   }
-
-
-//   .txt_nickname {
-//     position: absolute;
-//     bottom: 20px;
-//   }
