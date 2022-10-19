@@ -1,12 +1,27 @@
-const slidebtn = document.querySelector('#right_btn');
+const slidebtnRight = document.querySelector('#right_btn');
+const slidebtnLeft = document.querySelector('#left_btn');
 const category = document.querySelector('.best_category_list');
 
-slidebtn.addEventListener('click', () => {
-  console.log('hi');
-  moveSlide();
+slidebtnRight.addEventListener('click', () => {
+  // console.log('hi');
+  moveSlideRight();
+  slidebtnLeft.style.display = 'block';
+  slidebtnRight.style.display = 'none';
 });
 
-function moveSlide() {
+slidebtnLeft.addEventListener('click', () => {
+  console.log('hi');
+  slidebtnRight.style.display = 'block';
+  moveSlideLeft();
+  slidebtnLeft.style.display = 'none';
+});
+
+function moveSlideRight() {
   console.log('jdd');
   document.querySelector('.best_category_list').style.transform = 'translateX(-30%)';
+}
+
+function moveSlideLeft() {
+  console.log('jdd');
+  document.querySelector('.best_category_list').style.transform = 'translateX(0%)';
 }
