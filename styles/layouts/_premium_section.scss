@@ -31,7 +31,8 @@
     flex: 1 1 0;
 }
 
-img {
+.premium_imgList img,
+.best_imgList img {
     height: auto;
     width: 100%;
     border-radius: $radius-small;
@@ -60,7 +61,7 @@ img {
     overflow: hidden;
 }
 
-li {
+li.best_imgList {
     flex-shrink: 0;
     width: 30%;
 }

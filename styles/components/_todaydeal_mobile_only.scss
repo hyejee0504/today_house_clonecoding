@@ -1,5 +1,6 @@
 .mobile_screenout {
   display: none;
+
   @include responsive('T') {
     display: flex;
   }
@@ -8,9 +9,11 @@
 .mobile_screenout {
   display: none;
 
-.section_todaydeal {
-  overflow-x: scroll;
-  @include responsive('T') {
-    overflow-x: hidden;
+  .section_todaydeal {
+    overflow-x: scroll;
+
+    @include responsive('T') {
+      overflow-x: hidden;
+    }
   }
 }
