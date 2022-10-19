@@ -15,9 +15,126 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
-    <script src="js/main.js" defer></script>
   </head>
   <body>
+    <!-- 헤더 -->
+    <header class="global_header">
+      <div class="header_main">
+        <div class="header_inner">
+          <button class="btn_open_gnb" type="button" aria-label="메인 메뉴 열기"><span></span></button>
+
+          <h1 class="logo">오늘의집</h1>
+
+          <nav class="gnb">
+            <a class="is_active" href="#">커뮤니티</a>
+            <a href="#">스토어</a>
+            <a href="#">이사/시공/수리</a>
+          </nav>
+
+          <div class="util_group dt_hidden">
+            <button class="btn_open_search" type="button" aria-label="검색 창 열기"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+            <a class="btn_go_cart" href="#" aria-label="장바구니 바로가기"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a>
+          </div>
+
+          <div class="util_group dt-only">
+            <div class="search">
+              <label for="searchInput"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></label>
+              <input type="search" id="searchInput" placeholder="통합검색" />
+              <button class="btn_delete_search" type="button" aria-label="입력 내용 삭제"><i class="fa-solid fa-x" aria-hidden="true"></i></button>
+            </div>
+
+            <a class="btn_go_cart" href="#" aria-label="장바구니 바로가기"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a>
+          </div>
+
+          <ul class="user_list">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li class="dt-only"><a href="#">고객센터</a></li>
+          </ul>
+
+          <div class="posting">
+            <button class="btn_open_posting" type="button">글쓰기<i class="fa-solid fa-chevron-down dt-only" aria-hidden="true"></i></button>
+            <div class="posting_content">
+              <ul class="posting_list">
+                <li class="posting_item is_pic">
+                  <a href="#">
+                    <strong>사진/동영상 올리기</strong>
+                    <p>우리 집의 공간과 나의 일상을 기록해 보세요.</p>
+                  </a>
+                </li>
+                <li class="posting_item is_houses">
+                  <a href="#">
+                    <strong>집들이 글쓰기</strong>
+                    <p>집에 관한 이야기를 글로 작성해 보세요.</p>
+                  </a>
+                </li>
+                <li class="posting_item is_know">
+                  <a href="#">
+                    <strong>노하우 글쓰기</strong>
+                    <p>다양한 인테리어 노하우를 공유해 주세요.</p>
+                  </a>
+                </li>
+                <li class="posting_item is_review">
+                  <a href="#">
+                    <strong>상품 리뷰 쓰기</strong>
+                    <p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p>
+                  </a>
+                </li>
+                <li class="posting_item is_expert">
+                  <a href="#">
+                    <strong>시공 전문가 리뷰쓰기</strong>
+                    <p>시공 전문가 리뷰를 작성하고 포인트도 받아 보세요.</p>
+                  </a>
+                </li>
+                <li class="posting_item is_interior">
+                  <a href="#">
+                    <strong>인테리어 질문하기</strong>
+                    <p>인테리어 고수들과 전문가들에게 질문해 보세요.</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header_lnb">
+        <div class="header_inner">
+          <nav class="lnb is_active">
+            <a class="is_active" href="#">홈</a>
+            <a href="#">팔로잉</a>
+            <a href="#">사진</a>
+            <a href="#">집들이</a>
+            <a href="#">노하우</a>
+            <a href="#">전문가집들이</a>
+            <a href="#">셀프가이드</a>
+            <a href="#">질문과답변</a>
+            <a href="#">3D인테리어<span class="tag">BETA</span></a>
+            <a href="#">이벤트</a>
+          </nav>
+          <nav class="lnb">
+            <a href="#">스토어홈</a>
+            <a href="#">카테고리</a>
+            <a href="#">베스트</a>
+            <a href="#">오늘의딜</a>
+            <a href="#">리퍼마켓</a>
+            <a href="#">오!굿즈</a>
+            <a href="#">빠른배송</a>
+            <a href="#">프리미엄</a>
+            <a href="#">기획전</a>
+          </nav>
+          <nav class="lnb">
+            <a href="#">홈</a>
+            <a href="#">인테리어시공</a>
+            <a href="#">이사</a>
+            <a href="#">설치수리</a>
+            <a href="#">우리동네아파트</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- //헤더 -->
+
     <!-- == 도영작성_ First_Section == -->
     <section class="section_first">
       <div class="wrapper-top">
@@ -47,71 +164,664 @@
           </ul>
           <a class="carousel-page" href=""><span>1</span>/14+</a>
         </div>
+        <nav class="section_first-nav">
+          <ul>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/1cart.png" alt="" />
+                <p>쇼핑하기</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/2fest.png" alt="" />
+                <p>의식주축제</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/3deal.png" alt="" />
+                <p>오늘의딜</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/4what.png" alt="" />
+                <p>오늘뭐하지</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/5simple.png" alt="" />
+                <p>간편한끼</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/6welcome.png" alt="" />
+                <p>집들이</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/7popcorn.png" alt="" />
+                <p>꿀잼시리즈</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/8fast.png" alt="" />
+                <p>빠른배송</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/9easy.png" alt="" />
+                <p>쉬운이사</p>
+              </a>
+            </li>
+            <li>
+              <a href="#어딘가로가는링크">
+                <img class="section_first-icon" src="./assets/section_first/nav_img/10remodel.png" alt="" />
+                <p>리모델링</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="section_first-nav">
-        <ul>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/1cart.png" alt="" />
-              <p>쇼핑하기</p>
+    </section>
+
+    <!-- 윤정작성_ 오늘의 스토리 -->
+    <section class="section_todaystory">
+      <div class="todaystory_inner">
+        <h2 class="section_title">오늘의 스토리</h2>
+        <ul class="lists_todaystory">
+          <li class="list_todaystory story">
+            <a>
+              <div class="box_img">
+                <img class="img_todaystory" src="./images/스토리/todaystory_01.jpg" alt="" />
+              </div>
+              <p class="txt_desc">노란 빛의 생기를 담은 구축 리모델링 싱글홈</p>
+              <div class="user_desc">
+                <img class="userimg_todaystory" src="./images/유저프로필/userprofile_1.jpg" alt="" />
+                <p class="txt_nickname">땅콩이네</p>
+              </div>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/2fest.png" alt="" />
-              <p>의식주축제</p>
+          <li class="list_todaystory story">
+            <a>
+              <div class="box_img">
+                <img class="img_todaystory" src="./images/스토리/todaystory_02.jpg" alt="" />
+              </div>
+              <p class="txt_desc">미세꿀팁 가득! 20살 빌라 리모델링</p>
+              <div class="user_desc">
+                <img class="userimg_todaystory" src="./images/유저프로필/userprofile_2.jpg" alt="" />
+                <p class="txt_nickname">노세_땅땅이네</p>
+              </div>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/3deal.png" alt="" />
-              <p>오늘의딜</p>
+          <li class="list_todaystory story">
+            <a>
+              <div class="box_img">
+                <img class="img_todaystory" src="./images/스토리/todaystory_03.jpg" alt="" />
+              </div>
+              <p class="txt_desc">디자이너 남편의 로망이 듬뿍 담긴 호텔 같은 신혼집</p>
+              <div class="user_desc">
+                <img class="userimg_todaystory" src="./images/유저프로필/userprofile_3.jpg" alt="" />
+                <p class="txt_nickname">palmtree</p>
+              </div>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/4what.png" alt="" />
-              <p>오늘뭐하지</p>
+          <li class="list_todaystory">
+            <div class="menu_todaystory">
+              <a>
+                <div class="box_menu_todaystory">
+                  <p>예쁜 집 구경하기</p>
+                  <p class="txt_menu_todaystory">집들이</p>
+                </div>
+              </a>
+              <a>
+                <div class="box_menu_todaystory">
+                  <p>전문가 시공사례</p>
+                  <p class="txt_menu_todaystory">전문가 집들이</p>
+                </div>
+              </a>
+              <a>
+                <div class="box_menu_todaystory">
+                  <p>인테리어 꿀팁 총 집합</p>
+                  <p class="txt_menu_todaystory">노하우</p>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 윤정작성_ 카테고리별 상품 찾기 -->
+    <section class="section_categoric_product">
+      <div class="categoric_product_inner">
+        <h2 class="section_title">카테고리별 상품 찾기</h2>
+        <ul class="container_categoric_product">
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/furniture.png" alt="" />
+              <p>가구</p>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/5simple.png" alt="" />
-              <p>간편한끼</p>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/fabric.png" alt="" />
+              <p>패브릭</p>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/6welcome.png" alt="" />
-              <p>집들이</p>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/electronics.png" alt="" />
+              <p>가전</p>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/7popcorn.png" alt="" />
-              <p>꿀잼시리즈</p>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/cook.png" alt="" />
+              <p>주방용품</p>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/8fast.png" alt="" />
-              <p>빠른배송</p>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/plant.png" alt="" />
+              <p>데코·식물</p>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/9easy.png" alt="" />
-              <p>쉬운이사</p>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/light.png" alt="" />
+              <p>조명</p>
             </a>
           </li>
-          <li>
-            <a href="#어딘가로가는링크">
-              <img class="section_first-icon" src="./assets/section_first/nav_img/10remodel.png" alt="" />
-              <p>리모델링</p>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/clean.png" alt="" />
+              <p>수납·정리</p>
+            </a>
+          </li>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/necessity.png" alt="" />
+              <p>생필품</p>
+            </a>
+          </li>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/kids.png" alt="" />
+              <p>유아·아동</p>
+            </a>
+          </li>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/pet.png" alt="" />
+              <p>반려동물</p>
+            </a>
+          </li>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/workout.png" alt="" />
+              <p>실내운동</p>
+            </a>
+          </li>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/camping.png" alt="" />
+              <p>캠핑용품</p>
+            </a>
+          </li>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/diy.png" alt="" />
+              <p>공구·DIY</p>
+            </a>
+          </li>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/interior.png" alt="" />
+              <p>인테리어시공</p>
+            </a>
+          </li>
+          <li class="item_categoric_product">
+            <a>
+              <img class="img_categoric" src="./images/카테고리별/rental.png" alt="" />
+              <p>렌탈</p>
+            </a>
+          </li>
+          <a><i class="fa-solid fa-chevron-left"></i></a>
+          <a><i class="fa-solid fa-chevron-right"></i></a>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 오늘의 딜 -->
+    <section class="section_todaydeal">
+      <div class="todaydeal_inner">
+        <h2 class="section_title">오늘의 딜</h2>
+        <ul id="slider">
+          <li class="item">
+            <a href="">
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_01.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <div class="mobile_txt">
+                <p class="mb-only remainday_txt">6일 남음</p>
+                <p class="mobile_screenout brand_name">밝히는 가온</p>
+                <h3 class="productname_txt">[오늘의 딜]무선/유선 LED 멀티탁 센서등 무드들 조명 (건전지/충전식)</h3>
+                <p class="bestcheap_txt">최저가 도전</p>
+                <div class="price_txtsection">
+                  <strong class="percent_txt">27</strong><span>%</span>
+                  <p class="mobile_screenout price_txt">17,400 외</p>
+                </div>
+                <div class="review_txtsection mobile_screenout">
+                  <p class="star_txt"><i class="fa-solid fa-star"></i> 4.6</p>
+                  <p class="review_txt">리뷰 14,766</p>
+                </div>
+                <p class="freetrans mobile_screenout">무료배송</p>
+                <p class="mb-only moreshow_txt">특가 731개 더보기 ></p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_02.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">1일 남음</p>
+              <p class="brand_name">가쯔</p>
+              <h3 class="productname_txt">[주말특가/오늘의딜][1+1]초강력 실리콘 양면테이프</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">64%</strong> 3,900</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.5</p>
+                <p class="review_txt">리뷰 479</p>
+              </div>
+              <p class="freetrans">무료배송</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_03.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">2일 남음</p>
+              <p class="brand_name">네모라인</p>
+              <h3 class="productname_txt">(1+1) 엠보극세사 베개솜/경추베개솜/베개커버외특가모음</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">37%</strong> 9,900 외</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.4</p>
+                <p class="review_txt">리뷰 37,946</p>
+              </div>
+              <p class="freetrans">무료배송</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_04.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">5일 남음</p>
+              <p class="brand_name">빌레로이앤보흐</p>
+              <h3 class="productname_txt">[오늘의 딜][해외]크리스마스 한정판! 토이딜라이트 외 빌보 BEST 골라담기</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">45%</strong> 21,900 외</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.7</p>
+                <p class="review_txt">리뷰 2,859</p>
+              </div>
+              <p class="freetrans">해외직구</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_05.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">10일 남음</p>
+              <p class="brand_name">쿤탈</p>
+              <h3 class="productname_txt">쿤달 디퓨저 200ml 2구, 3구 & 차량용</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">20%</strong> 14,800 외</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.7</p>
+                <p class="review_txt">리뷰 1,099</p>
+              </div>
+              <p class="freetrans">무료배송</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_06.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">6일 남음</p>
+              <p class="brand_name">드리미</p>
+              <h3 class="productname_txt">[오늘의 딜][사전예약] 10.16 국내런칭! 드리미 W10 Pro 로봇 청소기 (~30일까지)</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">15%</strong> 1,099,000</p>
+              <div class="review_txtsection">
+                <p class="review_txt">스크랩 115</p>
+              </div>
+              <p class="freetrans">무료배송</p>
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <div class="img_wrap">
+                <img class="todaydeal_pic" src="./assets/todaydeal_img/main_todaydeal_section_07.jpg" alt="" /><img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+              </div>
+              <p class="remainday_txt">8일 남음</p>
+              <p class="brand_name">다우니</p>
+              <h3 class="productname_txt">초고농축 섬유유연제 1Lx5개</h3>
+              <p class="bestcheap_txt">최저가 도전</p>
+              <p class="price_txt"><strong class="percent_txt">13%</strong> 25,900 외</p>
+              <div class="review_txtsection">
+                <p class="star_txt"><i class="fa-solid fa-star"></i> 4.8</p>
+                <p class="review_txt">리뷰 3,833</p>
+              </div>
+              <p class="freetrans">무료배송</p>
             </a>
           </li>
         </ul>
-      </nav>
+        <a href="" class="plus_anc mobile_screenout">더보기</a>
+        <button class="prev mobile_screenout" onclick="slider.prev()"><i class="fa-sharp fa-solid fa-chevron-left"></i></button>
+        <button class="next mobile_screenout" onclick="slider.next()"><i class="fa-sharp fa-solid fa-chevron-right"></i></button>
+      </div>
     </section>
+
+    <!-- 오늘의 인기사진 -->
+    <section class="section_todaypic">
+      <div class="todaypic_inner">
+        <h2 class="section_title">오늘의 인기 사진</h2>
+        <ul>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_01.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_1.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_02.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_2.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_03.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_3.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_04.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_4.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_05.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_5.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_06.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_6.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_07.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_7.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img class="today_pic" src="assets/popularpic_img/main_popularpic_section_08.jpg" alt="" />
+              <img class="icon" src="./assets/icon/todaypic_8.png" alt="" />
+              <img class="bookmark_pic" src="./assets/icon/bookmark.png" alt="" />
+            </a>
+          </li>
+        </ul>
+        <a href="" class="plus_anc">더보기</a>
+      </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="global_footer">
+      <div class="footer_inner">
+        <div class="service">
+          <a class="btn_go_service" href="#">고객센터<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+          <a class="btn_call" href="#">1670-0876</a>
+          <p>09:00~18:00 (주말, 공휴일은 오늘의집 직접배송 및 이사/시공/수리 문의에 한해 전화 상담 가능)</p>
+        </div>
+
+        <ul class="sns_list">
+          <li class="app">
+            <a href="#" aria-label="애플"><i class="fa-brands fa-apple" aria-hidden="true"></i></a>
+          </li>
+          <li class="app">
+            <a href="#" aria-label="구글"><i class="fa-brands fa-google-play" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="#" aria-label="카카오페이지"><i class="fa-solid fa-quote-right" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="#" aria-label="페이스북"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="#" aria-label="네이버 블로그"><i class="fa-brands fa-blogger" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="#" aria-label="네이버 포스트"><i class="fa-solid fa-square-pen" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+
+        <nav class="fnb">
+          <a href="#">브랜드 스토리</a>
+          <a href="#">회사소개</a>
+          <a href="#">채용정보</a>
+          <a href="#">이용약관</a>
+          <a href="#"><strong>개인정보처리방침</strong></a>
+          <a href="#">공지사항</a>
+          <a href="#">고객센터</a>
+          <a href="#">고객의 소리</a>
+          <a href="#">전문가 등록</a>
+          <a href="#">사업자 구매회원</a>
+          <a href="#">제휴/광고 문의</a>
+          <a href="#">입점신청 문의</a>
+          <a href="#">안전거래센터</a>
+          <a href="#">상품광고 소개</a>
+        </nav>
+
+        <dl class="info">
+          <div>
+            <dt>상호명 :</dt>
+            <dd>(주)버킷플레이스</dd>
+          </div>
+          <div>
+            <dt>이메일 :</dt>
+            <dd>(고객문의) <a href="mailto:">cs@bucketplace.net</a> (제휴문의) <a href="mailto">contact@bucketplace.net</a></dd>
+          </div>
+          <div>
+            <dt>대표이사 :</dt>
+            <dd>이승재</dd>
+          </div>
+          <div>
+            <dt>사업자등록번호 :</dt>
+            <dd>119-86-91245</dd>
+          </div>
+          <div>
+            <dt>통신판매업신고번호 :</dt>
+            <dd>
+              제2018-서울서초-0580호 <a href="#"><strong>사업자정보확인</strong></a>
+            </dd>
+          </div>
+          <div>
+            <dt>주소 :</dt>
+            <dd><address>서울 서초구 서초대로74길 4 삼성생명서초타워 25층, 27층</address></dd>
+          </div>
+          <div>
+            <dt class="hidden">우리은행 채무지급보증안내 :</dt>
+            <dd>
+              <span aria-hidden="true">우리은행 채무지급보증안내 : </span>(주)버킷플레이스는 고객님이 현금결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+              <a href="#"><strong>서비스가입사실확인</strong></a>
+            </dd>
+          </div>
+        </dl>
+
+        <p class="noti">
+          오늘의집은 개별 판매자가 상품을 판매하는 오픈마켓이며 (주)버킷플레이스는 통신판매중개자로 거래 당사자가 아니므로, 판매자가 등록한 상품정보 및 거래 등에 대해 일체 책임을 지지 않습니다.<br />
+          단 ㈜버킷플레이스가 판매자로 등록 판매한 상품의 경우는 판매자로서 책임을 부담합니다.
+        </p>
+
+        <p class="copyright">Copyright 2014. bucketplace, Co., Ltd. All rights reserved</p>
+
+        <div class="mark">
+          <figure class="mark_item">
+            <img src="./assets/images/footer_mark_01.png" alt="" />
+            <figcaption>ISMS 정보보호 관리체계 인증 <br />2021. 09. 08 ~ 2024. 09. 07</figcaption>
+          </figure>
+          <figure class="mark_item">
+            <img src="./assets/images/footer_mark_02.png" alt="" />
+            <figcaption class="hidden">iso27001 인증</figcaption>
+          </figure>
+        </div>
+      </div>
+    </footer>
+    <!-- //푸터 -->
+
+    <!-- 모달 -->
+    <aside class="side_search">
+      <div class="side_search_wrap">
+        <div class="search">
+          <label for="searchInput"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></label>
+          <input type="search" id="searchInput" placeholder="통합검색" />
+          <button class="btn_delete_search" type="button" aria-label="입력 내용 삭제"><i class="fa-solid fa-x" aria-hidden="true"></i></button>
+        </div>
+        <button class="btn_close_search mb-only" type="button">취소</button>
+      </div>
+    </aside>
+
+    <aside class="side_menu mb-only">
+      <div class="side_menu_wrap">
+        <div class="side_menu_header">
+          <h2 class="logo"><a href="#">오늘의집</a></h2>
+          <button class="btn_download_app" type="button">앱 다운로드<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="side_menu_btns">
+          <a class="btn_login" href="#">로그인</a>
+          <a class="btn_join" href="#">회원가입</a>
+        </div>
+
+        <div class="side_menu_lnb">
+          <div class="lnb_wrap">
+            <button class="btn_open_lnb">
+              <i class="fa-solid fa-house"></i>
+              커뮤니티
+              <span class="open_icon"><i class="fa-solid fa-chevron-down" aria-hidden="hidden"></i></span>
+            </button>
+            <ul class="lnb">
+              <li><a class="is_active" href="#">홈</a></li>
+              <li><a href="#">팔로잉</a></li>
+              <li><a href="#">사진</a></li>
+              <li><a href="#">집들이</a></li>
+              <li><a href="#">노하우</a></li>
+              <li><a href="#">전문가집들이</a></li>
+              <li><a href="#">셀프가이드</a></li>
+              <li><a href="#">질문과답변</a></li>
+              <li><a href="#">3D인테리어</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
+          </div>
+
+          <div class="lnb_wrap">
+            <button class="btn_open_lnb">
+              <i class="fa-solid fa-store"></i>
+              스토어
+              <span class="open_icon"><i class="fa-solid fa-chevron-down" aria-hidden="hidden"></i></span>
+            </button>
+            <ul class="lnb">
+              <li><a href="#">스토어홈</a></li>
+              <li><a href="#">카테고리</a></li>
+              <li><a href="#">베스트</a></li>
+              <li><a href="#">오늘의딜</a></li>
+              <li><a href="#">리퍼마켓</a></li>
+              <li><a href="#">오!굿즈</a></li>
+              <li><a href="#">빠른배송</a></li>
+              <li><a href="#">프리미엄</a></li>
+              <li><a href="#">기획전</a></li>
+            </ul>
+          </div>
+
+          <div class="lnb_wrap">
+            <button class="btn_open_lnb">
+              <i class="fa-solid fa-truck"></i>
+              이사/시공/수리
+              <span class="open_icon"><i class="fa-solid fa-chevron-down" aria-hidden="hidden"></i></span>
+            </button>
+            <ul class="lnb">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">인테리어시공</a></li>
+              <li><a href="#">이사</a></li>
+              <li><a href="#">설치수리</a></li>
+              <li><a href="#">우리동네아파트</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="side_menu_user">
+          <ul>
+            <li>
+              <a href="#">마이페이지<span class="mark" aria-label="NEW">N</span></a>
+            </li>
+            <li><a href="#">나의 쇼핑</a></li>
+            <li><a href="#">스크랩북</a></li>
+            <li><a href="#">알림</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">사진 올리기</a></li>
+            <li><a href="#">집들이 글쓰기</a></li>
+            <li><a href="#">노하우 글쓰기</a></li>
+            <li><a href="#">상품 리뷰 쓰기</a></li>
+            <li><a href="#">시공 전문가 리뷰 쓰기</a></li>
+            <li><a href="#">인테리어 질문하기</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+
+        <div class="side_menu_apply">
+          <a href="#">전문가 신청</a>
+          <a href="#">판매자 신청</a>
+        </div>
+
+        <div class="side_menu_search"></div>
+      </div>
+    </aside>
+    <!-- //모달 -->
+
+    <script src="./js/side_menu.js"></script>
+    <script src="./js/side_lnb.js"></script>
+    <script src="./js/side_search.js"></script>
+    <script src="./js/global_header.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
+
