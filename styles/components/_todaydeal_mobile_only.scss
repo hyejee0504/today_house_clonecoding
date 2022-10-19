@@ -5,6 +5,9 @@
   }
 }
 
+.mobile_screenout {
+  display: none;
+
 .section_todaydeal {
   overflow-x: scroll;
   @include responsive('T') {
