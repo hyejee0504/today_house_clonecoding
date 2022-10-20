@@ -45,6 +45,14 @@ var Slider = function (id, _web, _tab, _mobile, spacing) {
   }
 
   // 화면 사이즈 수정시 발생하는 이벤트
+
+  // 반응형 디스플레이 갯수 조절
+  var isResponsive = _tab != undefined;
+  if (isResponsive) {
+    window.onresize = resize;
+  }
+  resize();
+
   function resize() {
     left = 0;
     document.querySelector('#' + id + ' .slider').style.left = left + 'px';
@@ -56,6 +64,12 @@ var Slider = function (id, _web, _tab, _mobile, spacing) {
       setDisplayCount(_tab);
     } else if (innerWidth < 768) {
       setDisplayCount(_mobile);
+    }
+
+    if (change === 0) {
+      let value = translate_value + (window.innerWidth - display_ul_width);
+      ul.style.transform = `translateX(${value}px)`;
+      // translate_value = 0;
     }
   }
 
@@ -72,13 +86,6 @@ var Slider = function (id, _web, _tab, _mobile, spacing) {
       items[i].style.width = sliderItemWidth - spacing + 'px';
     }
   }
-
-  // 반응형 디스플레이 갯수 조절
-  var isResponsive = _tab != undefined;
-  if (isResponsive) {
-    window.onresize = resize;
-  }
-  resize();
 
   let count;
   let prev_count = 0;

@@ -1,64 +1,87 @@
 .section_categoric_product {
-    margin: 60px 0;
+  margin: 60px 0;
 }
 
 .container_categoric_product {
-    display: flex;
-    position: relative;
+  width: 100%;
+  @include flex(between);
+  gap: 20px;
+  position: relative;
+  // display: flex;
+  // position: relative;
 }
 
+.categoric_product_inner {
+  position: relative;
+}
+
+.window {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile_screenout {
+  display: none;
+  @include responsive('T') {
+    display: flex;
+  }
+}
+
+//여기까지 새로 작성부분
 .item_categoric_product {
-    margin-top: 30px;
-    }
-
-.item_categoric_product a{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  margin-top: 30px;
 }
 
-    .img_categoric {
-        border-radius: 20%;
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-    }
+.item_categoric_product a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70px;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+}
 
-    .item_categoric_product p {
-        margin-top: 15px;
-        font-size: 14px;
-        font-weight: 500;
-    }
+.img_categoric {
+  border-radius: 20%;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
 
-.arrow_left{
-  position:absolute;
+.item_categoric_product p {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.arrow_left {
+  @include text-style(lg, #202427);
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: $white;
+  box-shadow: 0 2px 5px rgb(63 71 77 / 15%);
+  position: absolute;
+  &:hover {
+    background-color: #f7f9fa;
+  }
   top: 50%;
   left: 0px;
-  transform: translate(0%, -50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: white;
-  z-index: 10;
-  text-align: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgb(63 71 77 / 15%);
-  font-size: 20px;
-  line-height: 1.7;
+  display: none;
 }
-.arrow_right{
-  position:absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0%, -50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: white;
-  z-index: 10;
-  text-align: center;
-  justify-content: center;
+.arrow_right {
+  @include text-style(lg, #202427);
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: $white;
   box-shadow: 0 2px 5px rgb(63 71 77 / 15%);
-  font-size: 20px;
-  line-height: 1.7;
+  position: absolute;
+  &:hover {
+    background-color: #f7f9fa;
+  }
+  top: 50%;
+  right: 0px;
 }

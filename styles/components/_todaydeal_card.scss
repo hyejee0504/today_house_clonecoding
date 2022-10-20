@@ -47,16 +47,16 @@
   @include text-style(xl, $pink);
   padding-top: 10px;
   @include responsive('T') {
-    @include text-style(rg, $skyblue);
+    @include text-style(md, $skyblue);
     padding-top: 0;
   }
 }
 
 .price_txtsection span {
-  @include text-style(rg, $pink);
+  @include text-style(md, $pink);
   font-weight: 700;
   @include responsive('T') {
-    @include text-style(rg, $skyblue);
+    @include text-style(md, $skyblue);
     padding-top: 0;
   }
 }
@@ -74,7 +74,7 @@
 }
 
 .price_txt {
-  @include text-style(rg, $black);
+  @include text-style(md, $black);
   font-weight: 700;
 }
 
