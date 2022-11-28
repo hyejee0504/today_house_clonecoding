@@ -1,6 +1,8 @@
 # clone-ohou
 
-https://special-boron-6e4.notion.site/5e3eafa1325b40d99c50bb5f055d6336
+실행 url:https://hyejee0504.github.io/today_house_clonecoding
+
+notion: https://special-boron-6e4.notion.site/5e3eafa1325b40d99c50bb5f055d6336
 
 # 커밋 메세지 컨벤션
 - Feat : 새로운 기능을 추가할 경우
